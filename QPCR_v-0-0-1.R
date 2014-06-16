@@ -12,6 +12,7 @@ colnames(Start_Data) <- substring(Temp, first = 8)
 Data_Sum <- ddply(Start_Data, summarise, .variables = .(Detector, Sample, RNA), mean = mean(Ct), Err = sd(Ct))
 Gen_Data <- subset(Data_Sum, Detector == Test_Gen, drop = T)
 Ref_Data <- subset(Data_Sum, Detector == Ref_Gen, drop = T)
+
 # test of RT- values
 if (sum((subset(Gen_Data, RNA == "RT-")$mean), na.rm = T) != 0) 
 	print(summary(subset(Gen_Data, RNA == "RT-")$mean)) else print("No detection in no RT samples")

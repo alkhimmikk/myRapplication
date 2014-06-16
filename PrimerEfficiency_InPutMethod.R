@@ -20,7 +20,7 @@ abline(b, col="black", lwd=5)
 text(x=x[3]*2, y=mean(a$Ymean), paste("Slope=", round(d[2],3), sep=""))
 text(x=x[3]*2, y=mean(a$Ymean)-.5, paste("Power of\n Amplification=", round(PowOfAmpl,3), sep=""))
 
-svg("STING-efficiency.svg")
+svg("Outputs/STING-efficiency.svg")
 plot(Ymean~x,a, type="b", log="x", col="grey20", lwd=4 )
 abline(b, col="black", lwd=5)
 text(x=x[3]*2, y=mean(a$Ymean), paste("Slope=", round(d[2],3), sep=""))
