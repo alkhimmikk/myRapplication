@@ -1,7 +1,7 @@
 library(plyr)
 library(ggplot2)
 
-In_put <- read.table("qpcr_test//qpcr.csv", sep = ",", header = T)
+In_put <- read.table("SamplesForTest//2Genes_qPCR.csv", sep = ",", header = T)
 In_put$Ct <- as.numeric(as.character( In_put$Ct))
 Genes <- levels(In_put$Detector)
 Ref_Gen <- "HPRT"
