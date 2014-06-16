@@ -6,7 +6,7 @@ LegTxtSize<-element_text(size = rel(23), angle=0, face=2)
 GridType<-element_blank()
 AxLines<-element_line(size=.1)
 
-platemap <- read.csv("14-05-30_Platemap.csv")
+platemap <- read.csv("SamplesForTest//Plate.csv")
 
 platemap <- mutate(platemap,
 		   Row=as.numeric(match(toupper(substr(Position, 1, 1)), LETTERS)),
